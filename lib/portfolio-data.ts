@@ -5,17 +5,23 @@
  */
 
 export const profile = {
-  name: '[Your Full Name]',
-  initials: 'YN',
-  role: 'Medical Student',
+  name: 'Muhammad Siddiqui',
+  initials: 'MS',
+  role: 'Year 1 Medical Student',
   university: 'Gulf Medical University',
   location: 'Ajman, United Arab Emirates',
-  tagline:
-    '[A short line about what drives you in medicine — e.g. your commitment to patient care, curiosity in research, or the specialty you are drawn to.]',
+  tagline: 'Exploring medicine, advancing understanding, and making a difference.',
+  introduction:
+    'Interested in the intersection of medicine, scientific research, and patient care, with particular interests in neurology, anatomy, and evidence-based medicine.',
   email: 'your.email@example.com',
   cvUrl: '/cv/cv-placeholder.pdf',
   cvFileName: 'Your-Name-CV.pdf',
   cvLastUpdated: '[Month Year]',
+}
+
+export const siteMetadata = {
+  title: `${profile.name} | Medical Student Portfolio`,
+  description: `Personal portfolio of ${profile.name}, a Year 1 medical student at Gulf Medical University, Ajman, UAE — education, research, experience, achievements, and CV.`,
 }
 
 export const navItems = [
@@ -31,20 +37,16 @@ export const navItems = [
 
 export const about = {
   bio: [
-    '[Write a short introduction about yourself here. Mention where you are from, your current year of study at Gulf Medical University, and what first drew you to medicine.]',
-    '[Use a second paragraph to describe your approach to learning and patient care, the kind of doctor you hope to become, and anything that makes your path distinctive.]',
+    "I'm Muhammad Siddiqui, a first-year medical student at Gulf Medical University with an interest in the science behind disease and how scientific understanding can contribute to patient care.",
+    "My motivation for pursuing medicine comes from the opportunity to help people, bring a smile to someone's face, and work through problems that may initially seem difficult to solve. I'm particularly interested in medical research, neurology, anatomy, and evidence-based medicine. As I progress through medical school, I hope to deepen my understanding of these fields and explore how they connect scientific discovery with clinical practice.",
+    "Beyond academics, I enjoy going to the gym and painting. I've also been involved in organising charitable events through the SCR department at Al Noor, helping organise festivals and directly support participants. This experience has allowed me to contribute to activities beyond the classroom and be involved in initiatives that bring people together.",
   ],
-  interests: [
-    '[Medical interest 1]',
-    '[Medical interest 2]',
-    '[Medical interest 3]',
-    '[Medical interest 4]',
-  ],
+  interests: ['Medical research', 'Neurology', 'Anatomy', 'Evidence-based medicine'],
   facts: [
-    { label: 'Programme', value: '[Degree, e.g. MBBS]' },
-    { label: 'Current year', value: '[Year of study]' },
+    { label: 'Programme', value: 'MD programme' },
+    { label: 'Current year', value: 'Year 1' },
     { label: 'Based in', value: 'Ajman, UAE' },
-    { label: 'Languages', value: '[Languages you speak]' },
+    { label: 'Languages', value: 'English, Urdu, Hindi' },
   ],
 }
 
@@ -222,16 +224,11 @@ export const skills = [
   },
   {
     group: 'Languages',
-    items: ['[Language — proficiency]', '[Language — proficiency]'],
+    items: ['English', 'Urdu', 'Hindi'],
   },
 ]
 
-export const personalInterests = [
-  '[Interest or hobby]',
-  '[Interest or hobby]',
-  '[Interest or hobby]',
-  '[Interest or hobby]',
-]
+export const personalInterests = ['Gym', 'Painting', 'Charitable event organisation']
 
 export type SocialLink = {
   label: string

@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter, Instrument_Serif } from 'next/font/google'
+import { siteMetadata } from '@/lib/portfolio-data'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -12,9 +13,8 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  title: 'Medical Student Portfolio | Gulf Medical University',
-  description:
-    'Personal portfolio of a medical student at Gulf Medical University, Ajman, UAE — education, research, clinical experience, achievements, and CV.',
+  title: siteMetadata.title,
+  description: siteMetadata.description,
   generator: 'v0.app',
   icons: {
     icon: [

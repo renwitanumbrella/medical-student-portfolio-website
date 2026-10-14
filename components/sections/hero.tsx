@@ -43,6 +43,9 @@ export function Hero() {
         <p className="mt-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-pretty text-lg leading-relaxed text-navy-muted delay-200 duration-700 fill-mode-both">
           {profile.tagline}
         </p>
+        <p className="mt-4 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-pretty text-base leading-relaxed text-navy-muted/80 delay-200 duration-700 fill-mode-both">
+          {profile.introduction}
+        </p>
 
         <div className="mt-10 flex animate-in flex-wrap items-center gap-4 fade-in slide-in-from-bottom-4 delay-300 duration-700 fill-mode-both">
           <a
