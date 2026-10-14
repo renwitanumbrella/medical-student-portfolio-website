@@ -118,11 +118,13 @@ export function EcgMonitor({ className }: { className?: string }) {
 
     const setup = () => {
       const rect = canvas.getBoundingClientRect()
-      if (rect.width === width && rect.height === height) return
+      const nextWidth = Math.round(rect.width)
+      const nextHeight = Math.round(rect.height)
+      if (nextWidth === width && nextHeight === height) return
 
       const dpr = Math.min(window.devicePixelRatio || 1, 2)
-      width = rect.width
-      height = rect.height
+      width = nextWidth
+      height = nextHeight
       canvas.width = Math.round(width * dpr)
       canvas.height = Math.round(height * dpr)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
@@ -152,7 +154,13 @@ export function EcgMonitor({ className }: { className?: string }) {
       setup()
     }
 
-    const resizeObserver = new ResizeObserver(setup)
+    // Resizing the canvas backing store inside the observer callback can re-trigger
+    // layout in the same frame, so defer the work to the next animation frame.
+    let resizeFrameId = 0
+    const resizeObserver = new ResizeObserver(() => {
+      cancelAnimationFrame(resizeFrameId)
+      resizeFrameId = requestAnimationFrame(setup)
+    })
     resizeObserver.observe(canvas)
 
     const intersectionObserver = new IntersectionObserver(([entry]) => {
@@ -166,6 +174,7 @@ export function EcgMonitor({ className }: { className?: string }) {
 
     return () => {
       stop()
+      cancelAnimationFrame(resizeFrameId)
       resizeObserver.disconnect()
       intersectionObserver.disconnect()
       reducedMotion.removeEventListener('change', handleMotionChange)
