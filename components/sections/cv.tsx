@@ -1,6 +1,7 @@
 import { Download, FileText } from 'lucide-react'
 import { profile } from '@/lib/portfolio-data'
 import { Reveal } from '@/components/reveal'
+import { MoleculeField } from '@/components/molecule-field'
 
 export function CV() {
   return (
@@ -12,6 +13,7 @@ export function CV() {
               aria-hidden="true"
               className="absolute inset-0 -z-10 bg-[radial-gradient(50%_80%_at_100%_0%,oklch(0.6_0.15_252/0.3),transparent_70%)]"
             />
+            <MoleculeField density="light" className="text-pulse/20" />
             <div className="grid items-center gap-10 md:grid-cols-12">
               <div className="md:col-span-7">
                 <p className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-accent">
@@ -30,7 +32,7 @@ export function CV() {
                   <a
                     href={profile.cvUrl}
                     download={profile.cvFileName}
-                    className="group inline-flex items-center gap-2 rounded-full bg-navy-foreground px-6 py-3 text-sm font-medium text-navy transition-colors hover:bg-accent hover:text-accent-foreground"
+                    className="group inline-flex items-center gap-2 rounded-full bg-navy-foreground px-6 py-3 text-sm font-medium text-navy lift hover:bg-accent hover:text-accent-foreground"
                   >
                     <Download className="size-4 transition-transform group-hover:translate-y-0.5" aria-hidden="true" />
                     Download CV

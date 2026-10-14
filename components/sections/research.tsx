@@ -1,6 +1,7 @@
 import { ArrowUpRight, BookOpen, FlaskConical, Microscope, type LucideIcon } from 'lucide-react'
 import { projects, type ProjectItem } from '@/lib/portfolio-data'
 import { Reveal } from '@/components/reveal'
+import { DnaHelix } from '@/components/dna-helix'
 import { Section, Tag } from '@/components/section'
 
 const categoryIcon: Record<ProjectItem['category'], LucideIcon> = {
@@ -18,6 +19,9 @@ export function Research() {
       title="Inquiry at the bench and beyond"
       intro="Research experience, laboratory projects, and academic work that have shaped how I think about evidence and care."
     >
+      <Reveal className="-mt-6 mb-10 md:-mt-8">
+        <DnaHelix className="text-primary/70" />
+      </Reveal>
       <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => {
           const Icon = categoryIcon[project.category]

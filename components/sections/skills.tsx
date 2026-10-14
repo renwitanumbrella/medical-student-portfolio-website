@@ -25,7 +25,7 @@ export function Skills() {
           const Icon = groupIcon[group.group] ?? Lightbulb
           return (
             <Reveal key={group.group} delay={i * 80}>
-              <div className="h-full rounded-2xl border border-border bg-background p-6 transition-shadow duration-300 hover:shadow-[0_12px_40px_-16px_oklch(0.22_0.05_260/0.2)]">
+              <div className="h-full rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent/40 motion-reduce:hover:translate-y-0 hover:shadow-[0_12px_40px_-16px_oklch(0.22_0.05_260/0.2)]">
                 <Icon className="size-5 text-accent" aria-hidden="true" />
                 <h3 className="mt-5 font-serif text-xl">{group.group}</h3>
                 <ul className="mt-4 space-y-2.5">

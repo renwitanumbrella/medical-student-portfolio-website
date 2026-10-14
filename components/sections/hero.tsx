@@ -1,5 +1,7 @@
 import { ArrowDown, ArrowRight, MapPin } from 'lucide-react'
 import { profile } from '@/lib/portfolio-data'
+import { EcgMonitor } from '@/components/ecg-monitor'
+import { MoleculeField } from '@/components/molecule-field'
 
 export function Hero() {
   return (
@@ -17,20 +19,9 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 -z-10 opacity-[0.07] [background-image:linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
       />
 
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-        className="pointer-events-none absolute inset-x-0 bottom-36 -z-10 hidden h-24 w-full text-accent/50 md:block"
-      >
-        <path
-          className="ecg-line"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          d="M0 60 H420 L440 60 L455 30 L470 95 L490 10 L510 110 L525 60 H560 L575 48 L590 60 H1200"
-        />
-      </svg>
+      <MoleculeField className="text-pulse/25" />
+
+      <EcgMonitor className="absolute inset-x-0 top-20 -z-10 h-12 opacity-60 animate-in fade-in duration-1000 fill-mode-both md:top-auto md:bottom-36 md:h-24 md:opacity-80" />
 
       <div className="mx-auto w-full max-w-6xl px-6 pb-24 pt-32 md:pt-40">
         <p className="flex animate-in fade-in slide-in-from-bottom-3 items-center gap-2 text-sm text-navy-muted duration-700">
@@ -56,14 +47,14 @@ export function Hero() {
         <div className="mt-10 flex animate-in flex-wrap items-center gap-4 fade-in slide-in-from-bottom-4 delay-300 duration-700 fill-mode-both">
           <a
             href="#about"
-            className="group inline-flex items-center gap-2 rounded-full bg-navy-foreground px-6 py-3 text-sm font-medium text-navy transition-all hover:bg-accent hover:text-accent-foreground"
+            className="group inline-flex items-center gap-2 rounded-full bg-navy-foreground px-6 py-3 text-sm font-medium text-navy lift hover:bg-accent hover:text-accent-foreground"
           >
             Explore my portfolio
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
           </a>
           <a
             href="#cv"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-navy-foreground transition-colors hover:border-white/50 hover:bg-white/5"
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-navy-foreground lift hover:border-white/50 hover:bg-white/5"
           >
             View CV
           </a>
