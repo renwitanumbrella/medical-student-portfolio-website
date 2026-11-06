@@ -1,5 +1,6 @@
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import {
   ArrowLeft,
@@ -41,6 +42,7 @@ export default async function CompetencyDetailPage({
   }
 
   const Icon = role.icon
+
   const currentIndex = competencyRoles.findIndex(
     (item) => item.slug === role.slug,
   )
@@ -157,6 +159,7 @@ export default async function CompetencyDetailPage({
               <span className="font-mono text-sm text-accent">
                 01
               </span>
+
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Competency domain
               </p>
@@ -172,30 +175,6 @@ export default async function CompetencyDetailPage({
             <p className="mt-6 max-w-4xl text-base leading-[1.9] text-muted-foreground">
               {role.domain}
             </p>
-
-            {role.coreCompetency && (
-              <div className="mt-8 rounded-2xl border border-accent/30 bg-accent/5 p-6 md:p-8">
-                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-                  Official EmiratesMEDs core competency
-                </span>
-
-                <p className="mt-4 text-base leading-[1.85] text-foreground">
-                  {role.coreCompetency}
-                </p>
-              </div>
-            )}
-
-            {role.enablingCompetency && (
-              <div className="mt-5 rounded-2xl border border-emerald-500/25 bg-emerald-500/[0.035] p-6 md:p-8">
-                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-300">
-                  Most relevant enabling competency · {role.enablingCompetency.code}
-                </span>
-
-                <p className="mt-4 text-sm leading-relaxed text-foreground md:text-base">
-                  {role.enablingCompetency.statement}
-                </p>
-              </div>
-            )}
 
             <div className="mt-8">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
@@ -226,6 +205,7 @@ export default async function CompetencyDetailPage({
               <span className="font-mono text-sm text-accent">
                 02
               </span>
+
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Personal reflection
               </p>
@@ -288,6 +268,7 @@ export default async function CompetencyDetailPage({
               <span className="font-mono text-sm text-accent">
                 03
               </span>
+
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 Evidence portfolio
               </p>
@@ -306,46 +287,63 @@ export default async function CompetencyDetailPage({
             </p>
 
             {role.evidence && role.evidence.length > 0 ? (
-              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 {role.evidence.map((item) => (
                   <a
                     key={item.title}
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group rounded-2xl border border-border bg-background p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
+                    aria-label={`Open full-size ${item.title}`}
+                    className="group overflow-hidden rounded-2xl border border-border bg-background transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-lg"
                   >
-                    <div className="flex items-center justify-between">
-                      <span className="flex size-11 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                        <FileText className="size-5" aria-hidden="true" />
-                      </span>
+                    {item.image ? (
+                      <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
+                        <Image
+                          src={item.href}
+                          alt={item.title}
+                          fill
+                          sizes="(max-width: 640px) 100vw, 50vw"
+                          className="object-contain p-3 transition-transform duration-500 group-hover:scale-[1.02]"
+                        />
+                      </div>
+                    ) : (
+                      <div className="flex aspect-[4/3] items-center justify-center bg-muted/40">
+                        <FileText
+                          className="size-10 text-accent"
+                          aria-hidden="true"
+                        />
+                      </div>
+                    )}
 
-                      <ArrowUpRight
-                        className="size-5 text-muted-foreground transition-colors group-hover:text-accent"
-                        aria-hidden="true"
-                      />
+                    <div className="p-6">
+                      <h3 className="font-medium transition-colors group-hover:text-accent">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-2 text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
+
+                      <p className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-accent">
+                        View full certificate
+                        <ArrowUpRight
+                          className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                          aria-hidden="true"
+                        />
+                      </p>
                     </div>
-
-                    <h3 className="mt-6 font-medium transition-colors group-hover:text-accent">
-                      {item.title}
-                    </h3>
-
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
-
-                    <p className="mt-5 text-xs font-medium text-accent">
-                      Open document
-                    </p>
                   </a>
                 ))}
               </div>
             ) : (
               <div className="mt-8 rounded-2xl border border-dashed border-border bg-muted/20 p-8">
                 <FileText className="size-6 text-accent" aria-hidden="true" />
+
                 <p className="mt-4 font-serif text-xl">
                   Evidence to be added
                 </p>
+
                 <p className="mt-2 text-sm text-muted-foreground">
                   Relevant certificates, documents, and supporting material
                   will be included here as they become available.
