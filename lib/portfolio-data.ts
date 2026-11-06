@@ -85,35 +85,7 @@ export type ProjectItem = {
   link?: { label: string; href: string }
 }
 
-export const projects: ProjectItem[] = [
-  {
-    category: 'Research',
-    title: '[Research Project Title]',
-    description:
-      '[Summarise the research question, your methods, and what you learned or found.]',
-    role: '[Your role]',
-    period: '[Year]',
-    tags: ['[Topic]', '[Method]'],
-  },
-  {
-    category: 'Laboratory',
-    title: '[Laboratory Project Title]',
-    description:
-      '[Describe the laboratory work, techniques used, and your contribution.]',
-    role: '[Your role]',
-    period: '[Year]',
-    tags: ['[Technique]', '[Field]'],
-  },
-  {
-    category: 'Academic',
-    title: '[Academic Work Title]',
-    description:
-      '[Describe a case presentation, literature review, poster, or other academic work.]',
-    role: '[Your role]',
-    period: '[Year]',
-    tags: ['[Topic]', '[Format]'],
-  },
-]
+export const projects: ProjectItem[] = []
 
 export type ExperienceItem = {
   type: 'Clinical' | 'Volunteering'
