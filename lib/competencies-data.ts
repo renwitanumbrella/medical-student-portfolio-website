@@ -12,11 +12,6 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 
-export type ReflectionEntry = {
-  heading: string
-  content: string
-}
-
 export type EvidenceItem = {
   title: string
   description: string
@@ -33,7 +28,7 @@ export type CompetencyRole = {
   focus: string[]
   icon: LucideIcon
   status?: 'completed'
-  reflection?: ReflectionEntry[]
+  reflection?: string
   evidence?: EvidenceItem[]
   photosToAdd?: boolean
 }
@@ -114,38 +109,7 @@ export const competencyRoles: CompetencyRole[] = [
     ],
     icon: Users,
     status: 'completed',
-    reflection: [
-      {
-        heading: 'Description of the Activity',
-        content:
-          'On 15 October 2026, I took part in organising World Anatomy Day at Gulf Medical University. My contributions included teaching the abdominal anatomy activity and running the plank competition. I worked alongside the other organisers to help deliver the event.',
-      },
-      {
-        heading: 'Feelings',
-        content:
-          'Managing participants was a new responsibility for me, and I found it difficult at first. Taking responsibility for activities and interacting with participants challenged me to step outside what I was accustomed to. I also recognised that the success of the event depended on the organisers working together.',
-      },
-      {
-        heading: 'Evaluation',
-        content:
-          'One positive aspect was that the event came together through a collaborative effort. I was able to contribute by teaching the abdominal anatomy activity and running the plank competition. The main challenge for me was managing people, particularly because it was my first time taking on that responsibility in an event like this.',
-      },
-      {
-        heading: 'Analysis',
-        content:
-          'This experience showed me that organising an event involves more than preparing an activity. It also requires communication, coordination, and the ability to respond to participants. Working with the other organisers helped the event succeed and showed me how individual contributions can support a shared goal.',
-      },
-      {
-        heading: 'Conclusion',
-        content:
-          'I learned that I can contribute to a shared event by taking responsibility for specific activities, while also recognising that managing participants is an area in which I can continue to develop. The experience helped me appreciate the importance of teamwork and shared responsibility when taking on an organising role.',
-      },
-      {
-        heading: 'Action Plan',
-        content:
-          'For future events, I would prepare activity instructions in advance, clarify responsibilities with the other organisers, and think ahead about how participants will move between activities. I would also seek further opportunities to take on organising responsibilities so that I can develop greater confidence in coordinating groups.',
-      },
-    ],
+    reflection: `World Anatomy Day at Gulf Medical University on 15 October 2026 gave me my first opportunity to take on an organising role in an event of this kind. I contributed by teaching the abdominal anatomy activity and running the plank competition, working alongside the other organisers to help deliver the event. At first, I found managing participants more challenging than I had expected. Taking responsibility for activities and interacting with participants required me to think beyond simply knowing what I needed to do. Despite this initial challenge, the experience was rewarding because the activities came together through our collective effort, and I could see how my contribution supported the event. It also made me realise that organising an event involves much more than preparing activities. Communication, coordination and the ability to respond to people as situations develop are equally important. Looking back, I would prepare clearer instructions, agree on responsibilities with the other organisers beforehand, and consider how participants would move between activities. I would also welcome further opportunities to coordinate groups, as this is an area in which I would like to become more confident. Overall, World Anatomy Day helped me recognise the value of shared responsibility and gave me a practical opportunity to contribute to a team.`,
     evidence: [
       {
         title: 'World Anatomy Day Organiser Certificate',
