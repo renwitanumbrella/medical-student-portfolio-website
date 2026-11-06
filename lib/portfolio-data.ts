@@ -134,16 +134,26 @@ export const achievements: AchievementItem[] = [
 ]
 export const skills = [
   {
-    group: 'Clinical',
-    items: ['[Clinical skill]', '[Clinical skill]', '[Clinical skill]', '[Clinical skill]'],
+    group: 'Clinical & Medical Sciences',
+    items: [
+      'Urine sample analysis',
+      'Interpretation of laboratory findings',
+      'Blood grouping (ABO and Rh)',
+      'Bleeding time and clotting time assessment',
+    ],
   },
   {
     group: 'Research & Academic',
-    items: ['[Research skill]', '[Research skill]', '[Academic skill]', '[Academic skill]'],
+    items: ['Coming Soon'],
   },
   {
     group: 'Professional',
-    items: ['[Professional skill]', '[Professional skill]', '[Professional skill]'],
+    items: [
+      'Teamwork and collaboration',
+      'Scientific communication',
+      'Presentation skills',
+      'Event organisation',
+    ],
   },
   {
     group: 'Languages',
