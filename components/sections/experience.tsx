@@ -6,7 +6,7 @@ export function Experience() {
   return (
     <Section
       id="experience"
-      index="04"
+      index="05"
       eyebrow="Experience & volunteering"
       title="Learning beside patients and communities"
       intro="Clinical exposure and service work that ground my studies in real-world care."
