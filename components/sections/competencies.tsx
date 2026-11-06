@@ -244,7 +244,7 @@ export function Competencies() {
                 <div className="mt-auto flex items-center justify-between gap-3 pt-6">
                   {hasEvidence ? (
                     <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-accent">
-                      Evidence added
+                      Completed
                     </span>
                   ) : (
                     <span className="text-xs text-muted-foreground">
