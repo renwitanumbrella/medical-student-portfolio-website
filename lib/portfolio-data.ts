@@ -166,8 +166,8 @@ export type AchievementItem = {
   year: string
   description?: string
   credentialUrl?: string
+  imageUrl?: string
 }
-
 export const achievements: AchievementItem[] = [
   {
     kind: 'Certificate',
