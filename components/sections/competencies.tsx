@@ -206,66 +206,65 @@ export function Competencies() {
           const Icon = role.icon
           const hasEvidence = role.number === '05'
 
-          return (
-            <Reveal key={role.number} delay={i * 75}>
-              <button
-                type="button"
-                onClick={() => setActiveRole(role)}
-                aria-haspopup="dialog"
-                aria-label={`Explore ${role.title}`}
-                className={`group flex min-h-[265px] w-full flex-col rounded-2xl border p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-18px_oklch(0.22_0.05_260/0.25)] motion-reduce:transform-none ${
-                  hasEvidence
-                    ? 'border-accent/60 bg-accent/5 hover:border-accent'
-                    : 'border-border bg-background hover:border-accent/50'
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span
-                    className={`font-mono text-sm ${
-                      hasEvidence ? 'text-accent' : 'text-muted-foreground'
-                    }`}
-                  >
-                    {role.number} / 09
-                  </span>
+ return (
+  <Reveal key={role.number} delay={i * 75}>
+    <button
+      type="button"
+      onClick={() => setActiveRole(role)}
+      aria-haspopup="dialog"
+      aria-label={`Explore ${role.title}`}
+      className={`group flex min-h-[265px] w-full flex-col rounded-2xl border p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-18px_oklch(0.22_0.05_260/0.25)] motion-reduce:transform-none ${
+        hasEvidence
+          ? 'border-accent/60 bg-accent/5 hover:border-accent'
+          : 'border-border bg-background hover:border-accent/50'
+      }`}
+    >
+      <div className="flex items-center justify-between">
+        <span
+          className={`font-mono text-sm ${
+            hasEvidence ? 'text-accent' : 'text-muted-foreground'
+          }`}
+        >
+          {role.number} / 09
+        </span>
 
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-300 group-hover:rotate-3 group-hover:bg-accent group-hover:text-navy">
-                    <Icon className="size-5" aria-hidden="true" />
-                  </span>
-                </div>
-
-                <h4 className="mt-6 font-serif text-xl leading-snug transition-colors group-hover:text-accent">
-                  {role.title}
-                </h4>
-
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {role.description}
-                </p>
-
-                <div className="mt-auto flex items-center justify-between gap-3 pt-6">
-                  {hasEvidence ? (
-                    <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-accent">
-                      Completed
-                    </span>
-                  ) : (
-                    <span className="text-xs text-muted-foreground">
-                      Explore role
-                    </span>
-                  )}
-
-                  <span className="flex items-center gap-1 text-sm font-medium text-accent">
-                    Explore
-                    <ArrowUpRight
-                      className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                      aria-hidden="true"
-                    />
-                  </span>
-                </div>
-              </button>
-            </Reveal>
-          )
-        })}
+        <span className="flex size-11 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-300 group-hover:rotate-3 group-hover:bg-accent group-hover:text-navy">
+          <Icon className="size-5" aria-hidden="true" />
+        </span>
       </div>
 
+      <h4 className="mt-6 font-serif text-xl leading-snug transition-colors group-hover:text-accent">
+        {role.title}
+      </h4>
+
+      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+        {role.description}
+      </p>
+
+      <div className="mt-auto flex items-center justify-between gap-3 pt-6">
+        {hasEvidence ? (
+          <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-[10px] font-medium uppercase tracking-wider text-emerald-700 dark:text-emerald-300">
+            Completed
+          </span>
+        ) : (
+          <span className="text-xs text-muted-foreground">
+            Explore role
+          </span>
+        )}
+
+        <span className="flex items-center gap-1 text-sm font-medium text-accent">
+          Explore
+          <ArrowUpRight
+            className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            aria-hidden="true"
+          />
+        </span>
+      </div>
+    </button>
+  </Reveal>
+)
+        })}
+      </div>
       {/* Competency detail pop-up */}
       {activeRole && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto p-4">
