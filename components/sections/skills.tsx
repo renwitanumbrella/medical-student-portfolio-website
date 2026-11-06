@@ -21,7 +21,7 @@ export function Skills() {
   return (
     <Section
       id="skills"
-      index="06"
+      index="07"
       eyebrow="Skills & interests"
       title="What I bring to the team"
       intro="Practical medical science experience, professional skills, and interests developed through learning and collaboration."
