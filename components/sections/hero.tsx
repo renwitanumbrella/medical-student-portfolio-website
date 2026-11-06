@@ -49,12 +49,12 @@ export function Hero() {
 
         <div className="mt-10 flex animate-in flex-wrap items-center gap-4 fade-in slide-in-from-bottom-4 delay-300 duration-700 fill-mode-both">
           <a
-            href="#about"
-            className="group inline-flex items-center gap-2 rounded-full bg-navy-foreground px-6 py-3 text-sm font-medium text-navy lift hover:bg-accent hover:text-accent-foreground"
-          >
-            Explore my portfolio
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-          </a>
+  href="#competencies"
+  className="group inline-flex items-center gap-2 rounded-full bg-navy-foreground px-6 py-3 text-sm font-medium text-navy lift hover:bg-accent hover:text-accent-foreground"
+>
+  Competencies
+  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+</a>
           <a
             href="#cv"
             className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-medium text-navy-foreground lift hover:border-white/50 hover:bg-white/5"
