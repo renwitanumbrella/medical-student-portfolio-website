@@ -7,7 +7,7 @@ export function Research() {
   return (
     <Section
       id="research"
-      index="03"
+      index="04"
       eyebrow="Research & projects"
       title="Inquiry at the bench and beyond"
       intro="Research experience, laboratory projects, and academic work that have shaped how I think about evidence and care."
