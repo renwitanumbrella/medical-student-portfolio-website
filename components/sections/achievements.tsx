@@ -7,7 +7,7 @@ export function Achievements() {
   return (
     <Section
       id="achievements"
-      index="05"
+      index="06"
       eyebrow="Achievements & certificates"
       title="Recognition and credentials"
       intro="Awards, honours, and certifications earned along the way."
