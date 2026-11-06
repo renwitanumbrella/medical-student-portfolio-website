@@ -17,7 +17,7 @@ export function CV() {
             <div className="grid items-center gap-10 md:grid-cols-12">
               <div className="md:col-span-7">
                 <p className="flex items-center gap-3 text-xs font-medium uppercase tracking-[0.2em] text-accent">
-                  <span className="tabular-nums">07</span>
+                  <span className="tabular-nums">08</span>
                   <span aria-hidden="true" className="h-px w-8 bg-accent/60" />
                   Curriculum vitae
                 </p>
