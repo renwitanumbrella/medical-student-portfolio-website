@@ -170,45 +170,28 @@ export type AchievementItem = {
 
 export const achievements: AchievementItem[] = [
   {
-    kind: 'Award',
-    title: '[Award or Honour]',
-    issuer: '[Awarding Body]',
-    year: '[Year]',
-    description: '[One line on what it recognised.]',
+    kind: 'Certificate',
+    title: 'Mid-Semester Exam',
+    issuer: 'Gulf Medical University',
+    year: '19 October 2026',
+    description: 'Certificate of Achievement.',
   },
   {
     kind: 'Certificate',
-    title: '[Certificate Name]',
-    issuer: '[Issuing Organisation]',
-    year: '[Year]',
-    description: '[One line on what it covers.]',
+    title: 'Hayat Program',
+    issuer: 'UAE Ministry of Health & Prevention',
+    year: '30 September 2026',
+    description:
+      'In recognition of outstanding efforts and valuable contribution to the success of the Hayat Program.',
   },
   {
     kind: 'Certificate',
-    title: '[Certificate Name]',
-    issuer: '[Issuing Organisation]',
-    year: '[Year]',
-  },
-  {
-    kind: 'Award',
-    title: '[Achievement]',
-    issuer: '[Organisation]',
-    year: '[Year]',
-  },
-  {
-    kind: 'Certificate',
-    title: '[Certificate Name]',
-    issuer: '[Issuing Organisation]',
-    year: '[Year]',
-  },
-  {
-    kind: 'Award',
-    title: '[Achievement]',
-    issuer: '[Organisation]',
-    year: '[Year]',
+    title: 'World Anatomy Day',
+    issuer: 'Gulf Medical University',
+    year: '15 October 2026',
+    description: 'Certificate recognising your role as an organiser.',
   },
 ]
-
 export const skills = [
   {
     group: 'Clinical',
