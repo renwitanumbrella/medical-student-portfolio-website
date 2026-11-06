@@ -1,7 +1,9 @@
+
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { Hero } from '@/components/sections/hero'
 import { About } from '@/components/sections/about'
+import { Competencies } from '@/components/sections/competencies'
 import { Education } from '@/components/sections/education'
 import { Research } from '@/components/sections/research'
 import { Experience } from '@/components/sections/experience'
@@ -17,6 +19,7 @@ export default function Page() {
       <main id="main">
         <Hero />
         <About />
+        <Competencies />
         <Education />
         <Research />
         <Experience />
