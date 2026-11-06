@@ -7,7 +7,7 @@ export function Education() {
   return (
     <Section
       id="education"
-      index="02"
+      index="03"
       eyebrow="Education"
       title="Academic journey"
       intro="The milestones of my medical training so far — from foundations to clinical years."
