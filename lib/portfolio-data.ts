@@ -24,8 +24,10 @@ export const siteMetadata = {
   description: `Personal portfolio of ${profile.name}, a Year 1 medical student at Gulf Medical University, Ajman, UAE — education, research, experience, achievements, and CV.`,
 }
 
+
 export const navItems = [
   { id: 'about', label: 'About' },
+  { id: 'competencies', label: 'Competencies' },
   { id: 'education', label: 'Education' },
   { id: 'research', label: 'Research' },
   { id: 'experience', label: 'Experience' },
@@ -34,6 +36,7 @@ export const navItems = [
   { id: 'cv', label: 'CV' },
   { id: 'contact', label: 'Contact' },
 ] as const
+
 
 export const about = {
   bio: [
