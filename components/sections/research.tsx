@@ -1,14 +1,7 @@
-import { ArrowUpRight, BookOpen, FlaskConical, Microscope, type LucideIcon } from 'lucide-react'
-import { projects, type ProjectItem } from '@/lib/portfolio-data'
+import { ArrowRight } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
 import { DnaHelix } from '@/components/dna-helix'
-import { Section, Tag } from '@/components/section'
-
-const categoryIcon: Record<ProjectItem['category'], LucideIcon> = {
-  Research: Microscope,
-  Laboratory: FlaskConical,
-  Academic: BookOpen,
-}
+import { Section } from '@/components/section'
 
 export function Research() {
   return (
@@ -22,50 +15,31 @@ export function Research() {
       <Reveal className="-mt-6 mb-10 md:-mt-8">
         <DnaHelix className="text-primary/70" />
       </Reveal>
-      <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, i) => {
-          const Icon = categoryIcon[project.category]
-          return (
-            <Reveal as="li" key={i} delay={i * 100}>
-              <article className="group flex h-full flex-col rounded-2xl border border-border bg-background p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_20px_50px_-20px_oklch(0.22_0.05_260/0.25)]">
-                <div className="flex items-center justify-between">
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-muted text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
-                    <Icon className="size-5" aria-hidden="true" />
-                  </span>
-                  <span className="text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-                    {project.category}
-                  </span>
-                </div>
-                <h3 className="mt-6 font-serif text-2xl leading-snug">{project.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  {project.role} &middot; {project.period}
-                </p>
-                <p className="mt-4 flex-1 leading-relaxed text-muted-foreground text-pretty">
-                  {project.description}
-                </p>
-                <ul className="mt-6 flex flex-wrap gap-2">
-                  {project.tags.map((tag, j) => (
-                    <li key={j}>
-                      <Tag>{tag}</Tag>
-                    </li>
-                  ))}
-                </ul>
-                {project.link ? (
-                  <a
-                    href={project.link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
-                  >
-                    {project.link.label}
-                    <ArrowUpRight className="size-4" aria-hidden="true" />
-                  </a>
-                ) : null}
-              </article>
-            </Reveal>
-          )
-        })}
-      </ul>
+
+      <Reveal>
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-background px-8 py-14 text-center md:px-16 md:py-20">
+          <div className="mx-auto flex max-w-xl flex-col items-center">
+            <span className="mb-6 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-accent">
+              Coming Soon
+            </span>
+
+            <h3 className="font-serif text-3xl leading-snug md:text-4xl">
+              Something is in the works.
+            </h3>
+
+            <p className="mt-4 max-w-md leading-relaxed text-muted-foreground">
+              This space will soon feature research experiences, laboratory
+              work, and academic projects as my journey through medicine
+              progresses.
+            </p>
+
+            <div className="mt-8 flex items-center gap-2 text-sm font-medium text-accent">
+              More to come
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+      </Reveal>
     </Section>
   )
 }
