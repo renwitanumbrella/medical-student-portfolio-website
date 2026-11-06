@@ -13,10 +13,10 @@ export const profile = {
   tagline: 'Exploring medicine, advancing understanding, and making a difference.',
   introduction:
     'Interested in the intersection of medicine, scientific research, and patient care, with particular interests in neurology, anatomy, and evidence-based medicine.',
-  email: 'your.email@example.com',
-  cvUrl: '/cv/cv-placeholder.pdf',
-  cvFileName: 'Your-Name-CV.pdf',
-  cvLastUpdated: '[Month Year]',
+  email: 'muhammadfurq.s23@gmail.com',
+  cvUrl: '/Muhammad_Siddiqui_CV_.pdf',
+  cvFileName: 'Muhammad_Siddiqui_CV_.pdf',
+  cvLastUpdated: 'November 2026',
 }
 
 export const siteMetadata = {
