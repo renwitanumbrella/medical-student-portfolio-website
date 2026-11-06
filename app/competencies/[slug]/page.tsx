@@ -194,63 +194,46 @@ export default async function CompetencyDetailPage({
           </section>
         </Reveal>
 
-        {/* Personal reflection */}
-        <Reveal delay={100}>
-          <section
-            aria-labelledby="reflection-heading"
-            className="border-b border-border py-12"
-          >
-            <div className="flex items-center gap-3">
-              <span className="font-mono text-sm text-accent">
-                02
-              </span>
+        
+{/* Personal reflection */}
+<Reveal delay={100}>
+  <section
+    aria-labelledby="reflection-heading"
+    className="border-b border-border py-12"
+  >
+    <div className="flex items-center gap-3">
+      <span className="font-mono text-sm text-accent">
+        02
+      </span>
+    </div>
 
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                Personal Reflection
-              </p>
-            </div>
+    <h2
+      id="reflection-heading"
+      className="mt-5 font-serif text-3xl md:text-4xl"
+    >
+      Personal Reflection
+    </h2>
 
-            <h2
-              id="reflection-heading"
-              className="mt-5 font-serif text-3xl md:text-4xl"
-            >
-              Personal Reflection
-            </h2>
+    {role.reflection ? (
+      <p className="mt-7 max-w-4xl text-sm leading-[2] text-muted-foreground md:text-base">
+        {role.reflection}
+      </p>
+    ) : (
+      <div className="mt-8 rounded-2xl border border-dashed border-border bg-muted/20 p-8">
+        <p className="font-serif text-xl">
+          Reflection to be added
+        </p>
 
-            {role.reflection && role.reflection.length > 0 ? (
-              <>
-                {role.reflection.map((entry, index) => (
-                  <article
-                    key={entry.heading}
-                    className={`mt-7 grid gap-4 md:grid-cols-[210px_1fr] ${
-                      index > 0 ? 'border-t border-border pt-7' : ''
-                    }`}
-                  >
-                    <h3 className="font-semibold leading-relaxed text-foreground">
-                      {entry.heading}
-                    </h3>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          This space will document relevant experiences, personal
+          reflections, and lessons learned as I develop in this
+          competency throughout medical school.
+        </p>
+      </div>
+    )}
+  </section>
+</Reveal>
 
-                    <p className="text-sm leading-[1.9] text-muted-foreground md:text-base">
-                      {entry.content}
-                    </p>
-                  </article>
-                ))}
-              </>
-            ) : (
-              <div className="mt-8 rounded-2xl border border-dashed border-border bg-muted/20 p-8">
-                <p className="font-serif text-xl">
-                  Reflection to be added
-                </p>
-
-                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                  This space will document relevant experiences, personal
-                  reflections, and lessons learned as I develop in this
-                  competency throughout medical school.
-                </p>
-              </div>
-            )}
-          </section>
-        </Reveal>
 
         {/* Evidence portfolio */}
         <Reveal delay={200}>
