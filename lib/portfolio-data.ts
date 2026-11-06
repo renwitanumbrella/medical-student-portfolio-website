@@ -39,11 +39,14 @@ export const navItems = [
 
 
 export const about = {
-  bio: [
-    "I'm Muhammad Siddiqui, a first-year medical student at Gulf Medical University with an interest in the science behind disease and how scientific understanding can contribute to patient care.",
-    "My motivation for pursuing medicine comes from the opportunity to help people, bring a smile to someone's face, and work through problems that may initially seem difficult to solve. I'm particularly interested in medical research, neurology, anatomy, and evidence-based medicine. As I progress through medical school, I hope to deepen my understanding of these fields and explore how they connect scientific discovery with clinical practice.",
-    "Beyond academics, I enjoy going to the gym and painting. I've also been involved in organising charitable events through the SCR department at Al Noor, helping organise festivals and directly support participants. This experience has allowed me to contribute to activities beyond the classroom and be involved in initiatives that bring people together.",
-  ],
+  
+bio: [
+  "I'm Muhammad Siddiqui, a first-year medical student at Gulf Medical University, interested in understanding the science behind disease and how that knowledge can make a difference in patient care.",
+
+  "What draws me to medicine is the opportunity to help people, make a positive difference in their lives, and take on problems that require curiosity, patience, and critical thinking. I'm particularly interested in medical research, neurology, anatomy, and evidence-based medicine. As I progress through medical school, I hope to explore these areas further and understand how scientific discoveries translate into better clinical practice.",
+
+  "Outside my studies, I spend time at the gym and enjoy painting. I'm also drawn to charitable and community initiatives, especially those that bring people together. Being involved in organising events has given me the opportunity to work with others, take responsibility, and contribute to something beyond my own academic journey.",
+],
   interests: ['Medical research', 'Neurology', 'Anatomy', 'Evidence-based medicine'],
   facts: [
     { label: 'Programme', value: 'MD programme' },
