@@ -21,6 +21,7 @@ export type EvidenceItem = {
   title: string
   description: string
   href: string
+  image?: boolean
 }
 
 export type CompetencyRole = {
@@ -32,11 +33,6 @@ export type CompetencyRole = {
   focus: string[]
   icon: LucideIcon
   status?: 'completed'
-  coreCompetency?: string
-  enablingCompetency?: {
-    code: string
-    statement: string
-  }
   reflection?: ReflectionEntry[]
   evidence?: EvidenceItem[]
   photosToAdd?: boolean
@@ -118,13 +114,6 @@ export const competencyRoles: CompetencyRole[] = [
     ],
     icon: Users,
     status: 'completed',
-    coreCompetency:
-      'Demonstrate the ability to collaborate and lead a health team and actively engage in an interprofessional health team in a manner that optimizes safe, effective patient and population-centered care.',
-    enablingCompetency: {
-      code: 'CIL5',
-      statement:
-        'Demonstrate leadership skills that enhance team functioning, the learning environment, and/or the health care delivery system.',
-    },
     reflection: [
       {
         heading: 'A. Description of the Activity',
@@ -163,6 +152,7 @@ export const competencyRoles: CompetencyRole[] = [
         description:
           'Gulf Medical University · 15 October 2026',
         href: '/world%20anatomy%20day.png',
+        image: true,
       },
     ],
     photosToAdd: true,
