@@ -175,6 +175,7 @@ export const achievements: AchievementItem[] = [
     issuer: 'Gulf Medical University',
     year: '19 October 2026',
     description: 'Certificate of Achievement.',
+    imageUrl: '/mid-semester%20exam%20achievement.png',
   },
   {
     kind: 'Certificate',
@@ -183,6 +184,7 @@ export const achievements: AchievementItem[] = [
     year: '30 September 2026',
     description:
       'In recognition of outstanding efforts and valuable contribution to the success of the Hayat Program.',
+    imageUrl: '/organ%20donation%20conference.png',
   },
   {
     kind: 'Certificate',
@@ -190,6 +192,7 @@ export const achievements: AchievementItem[] = [
     issuer: 'Gulf Medical University',
     year: '15 October 2026',
     description: 'Certificate recognising your role as an organiser.',
+    imageUrl: '/world%20anatomy%20day.png',
   },
 ]
 export const skills = [
