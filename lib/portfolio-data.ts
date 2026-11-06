@@ -61,20 +61,17 @@ export type TimelineItem = {
 
 export const education: TimelineItem[] = [
   {
-    period: '[Start Year] — Present',
-    title: '[Degree, e.g. Doctor of Medicine / MBBS]',
+    period: 'August 2026 — Present',
+    title: 'Doctor of Medicine (MD) — Year 1',
     institution: 'Gulf Medical University',
     location: 'Ajman, UAE',
     description:
-      '[Describe your medical programme, current stage of training, and focus areas.]',
-    highlights: ['[Relevant module or rotation]', '[Relevant module or rotation]'],
-  },
-  {
-    period: '[Start Year] — [End Year]',
-    title: '[Previous qualification, e.g. High School / Pre-Medical]',
-    institution: '[Institution Name]',
-    location: '[City, Country]',
-    description: '[Add a brief description of this stage of your education.]',
+      'Currently undertaking the first year of the Doctor of Medicine programme, building foundational knowledge in medical sciences and developing an understanding of the scientific principles underlying patient care.',
+    highlights: [
+      'Anatomy',
+      'Physiology',
+      'Biochemistry',
+    ],
   },
 ]
 
