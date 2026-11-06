@@ -95,39 +95,7 @@ export type ExperienceItem = {
   description: string
 }
 
-export const experience: ExperienceItem[] = [
-  {
-    type: 'Clinical',
-    title: '[Role, e.g. Clinical Observer]',
-    organisation: '[Hospital or Clinic Name]',
-    period: '[Month Year] — [Month Year]',
-    description:
-      '[Describe the healthcare setting, what you observed or did, and what you learned.]',
-  },
-  {
-    type: 'Clinical',
-    title: '[Healthcare Experience Role]',
-    organisation: '[Organisation Name]',
-    period: '[Month Year] — [Month Year]',
-    description: '[Add details about this healthcare-related experience.]',
-  },
-  {
-    type: 'Volunteering',
-    title: '[Volunteer Role]',
-    organisation: '[Organisation or Initiative]',
-    period: '[Month Year] — [Month Year]',
-    description:
-      '[Describe the community service, who it supported, and your contribution.]',
-  },
-  {
-    type: 'Volunteering',
-    title: '[Volunteer Role]',
-    organisation: '[Organisation or Initiative]',
-    period: '[Month Year] — [Month Year]',
-    description: '[Add details about this volunteering experience.]',
-  },
-]
-
+export const experience: ExperienceItem[] = []
 export type AchievementItem = {
   kind: 'Award' | 'Certificate'
   title: string
