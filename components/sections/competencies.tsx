@@ -174,7 +174,7 @@ export function Competencies() {
             </span>
 
             <h3 className="mt-6 max-w-2xl font-serif text-3xl leading-tight md:text-5xl">
-              A framework for the physician I am working towards becoming.
+              The kind of doctor I hope to become.
             </h3>
 
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-navy-muted md:text-base">
@@ -182,27 +182,6 @@ export function Competencies() {
               academic, professional, and social responsibilities of a
               medical graduate.
             </p>
-
-            <div className="mt-9 grid max-w-xl grid-cols-3 gap-3">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-4">
-                <p className="font-serif text-3xl text-accent">09</p>
-                <p className="mt-1 text-xs leading-relaxed text-navy-muted">
-                  Thematic roles
-                </p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-4">
-                <p className="font-serif text-3xl text-accent">85</p>
-                <p className="mt-1 text-xs leading-relaxed text-navy-muted">
-                  Enabling competencies
-                </p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.06] p-4">
-                <p className="font-serif text-3xl text-accent">14</p>
-                <p className="mt-1 text-xs leading-relaxed text-navy-muted">
-                  Professional activities
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </Reveal>
