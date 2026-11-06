@@ -135,11 +135,10 @@ export default async function CompetencyDetailPage({
             </div>
 
             {role.status === 'completed' && (
-              <p className="mt-7 max-w-2xl text-xs leading-relaxed text-navy-muted">
-                This entry documents a completed World Anatomy Day
-                organising experience relevant to this role. It represents
-                one example of development, rather than claiming that every
-                graduate-level expectation has been achieved.
+              <p className="mt-7 max-w-2xl text-sm leading-relaxed text-navy-muted">
+                Organising World Anatomy Day gave me the opportunity to take
+                responsibility for activities, work with other organisers,
+                and help make the event a success.
               </p>
             )}
           </Reveal>
@@ -207,7 +206,7 @@ export default async function CompetencyDetailPage({
               </span>
 
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                Personal reflection
+                Personal Reflection
               </p>
             </div>
 
@@ -215,16 +214,11 @@ export default async function CompetencyDetailPage({
               id="reflection-heading"
               className="mt-5 font-serif text-3xl md:text-4xl"
             >
-              Learning through experience
+              Personal Reflection
             </h2>
 
             {role.reflection && role.reflection.length > 0 ? (
               <>
-                <div className="mt-5 flex items-center gap-2 text-sm text-muted-foreground">
-                  <BookOpen className="size-4 text-accent" aria-hidden="true" />
-                  Structured using Gibbs' Reflective Cycle
-                </div>
-
                 {role.reflection.map((entry, index) => (
                   <article
                     key={entry.heading}
