@@ -8,7 +8,7 @@ export function Contact() {
   return (
     <Section
       id="contact"
-      index="08"
+      index="09"
       eyebrow="Contact"
       title="Let's connect."
       intro="I'm always interested in connecting with people who share an interest in medicine, scientific research, and learning. Feel free to reach out by email."
