@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
   icons: {
-    icon: '/icon.svg',
+   icon: '/icon.svg?v=2',
     apple: '/apple-icon.png',
   },
 }
