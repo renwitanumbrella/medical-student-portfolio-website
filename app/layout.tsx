@@ -20,34 +20,28 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/favicon.ico?v=1',
+        url: '/favicon.ico?v=2',
         type: 'image/x-icon',
       },
       {
-        url: '/icon-light-32x32.png?v=2',
+        url: '/icon-light-32x32.png?v=3',
         type: 'image/png',
         sizes: '32x32',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png?v=2',
+        url: '/icon-dark-32x32.png?v=3',
         type: 'image/png',
         sizes: '32x32',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg?v=4',
+        url: '/icon.svg?v=5',
         type: 'image/svg+xml',
       },
     ],
-    shortcut: '/favicon.ico?v=1',
-    apple: [
-      {
-        url: '/apple-icon.png?v=2',
-        type: 'image/png',
-        sizes: '180x180',
-      },
-    ],
+    shortcut: '/favicon.ico?v=2',
+    apple: '/apple-icon.png?v=3',
   },
 }
 
