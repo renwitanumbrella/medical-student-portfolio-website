@@ -17,6 +17,8 @@ export type EvidenceItem = {
   description: string
   href: string
   image?: boolean
+  linkLabel?: string
+  tag?: boolean
 }
 
 export type CompetencyRole = {
@@ -116,24 +118,31 @@ export const competencyRoles: CompetencyRole[] = [
         description: 'Gulf Medical University · 15 October 2026',
         href: '/world%20anatomy%20day.png',
         image: true,
+        linkLabel: 'View full certificate',
       },
       {
         title: 'World Anatomy Day – Event Photograph 1',
         description: 'Event evidence · Gulf Medical University',
         href: '/worldanatomydayevi.JPG',
         image: true,
+        linkLabel: 'World Anatomy Day',
+        tag: true,
       },
       {
         title: 'World Anatomy Day – Event Photograph 2',
         description: 'Event evidence · Gulf Medical University',
         href: '/worldanatomydayevid.JPG',
         image: true,
+        linkLabel: 'World Anatomy Day',
+        tag: true,
       },
       {
         title: 'World Anatomy Day – Event Photograph 3',
         description: 'Event evidence · Gulf Medical University',
         href: '/worldanatomydayeviden.JPG',
         image: true,
+        linkLabel: 'World Anatomy Day',
+        tag: true,
       },
     ],
   },
