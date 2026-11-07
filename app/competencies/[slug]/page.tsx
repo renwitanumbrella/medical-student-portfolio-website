@@ -6,7 +6,6 @@ import {
   ArrowLeft,
   ArrowUpRight,
   BadgeCheck,
-  BookOpen,
   CalendarDays,
   ChevronLeft,
   ChevronRight,
@@ -194,46 +193,44 @@ export default async function CompetencyDetailPage({
           </section>
         </Reveal>
 
-        
-{/* Personal reflection */}
-<Reveal delay={100}>
-  <section
-    aria-labelledby="reflection-heading"
-    className="border-b border-border py-12"
-  >
-    <div className="flex items-center gap-3">
-      <span className="font-mono text-sm text-accent">
-        02
-      </span>
-    </div>
+        {/* Personal reflection */}
+        <Reveal delay={100}>
+          <section
+            aria-labelledby="reflection-heading"
+            className="border-b border-border py-12"
+          >
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-sm text-accent">
+                02
+              </span>
+            </div>
 
-    <h2
-      id="reflection-heading"
-      className="mt-5 font-serif text-3xl md:text-4xl"
-    >
-      Personal Reflection
-    </h2>
+            <h2
+              id="reflection-heading"
+              className="mt-5 font-serif text-3xl md:text-4xl"
+            >
+              Personal Reflection
+            </h2>
 
-    {role.reflection ? (
-      <p className="mt-7 max-w-4xl text-sm leading-[2] text-muted-foreground md:text-base">
-        {role.reflection}
-      </p>
-    ) : (
-      <div className="mt-8 rounded-2xl border border-dashed border-border bg-muted/20 p-8">
-        <p className="font-serif text-xl">
-          Reflection to be added
-        </p>
+            {role.reflection ? (
+              <p className="mt-7 max-w-4xl text-sm leading-[2] text-muted-foreground md:text-base">
+                {role.reflection}
+              </p>
+            ) : (
+              <div className="mt-8 rounded-2xl border border-dashed border-border bg-muted/20 p-8">
+                <p className="font-serif text-xl">
+                  Reflection to be added
+                </p>
 
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          This space will document relevant experiences, personal
-          reflections, and lessons learned as I develop in this
-          competency throughout medical school.
-        </p>
-      </div>
-    )}
-  </section>
-</Reveal>
-
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                  This space will document relevant experiences, personal
+                  reflections, and lessons learned as I develop in this
+                  competency throughout medical school.
+                </p>
+              </div>
+            )}
+          </section>
+        </Reveal>
 
         {/* Evidence portfolio */}
         <Reveal delay={200}>
@@ -302,13 +299,24 @@ export default async function CompetencyDetailPage({
                         {item.description}
                       </p>
 
-                      <p className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-accent">
-                        View full certificate
-                        <ArrowUpRight
-                          className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                          aria-hidden="true"
-                        />
-                      </p>
+                      {item.tag ? (
+                        <span className="mt-5 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/5 px-3 py-1.5 text-xs font-semibold text-accent transition-colors group-hover:border-accent/50 group-hover:bg-accent/10">
+                          <span className="size-1.5 rounded-full bg-accent" />
+                          {item.linkLabel}
+                          <ArrowUpRight
+                            className="size-3.5"
+                            aria-hidden="true"
+                          />
+                        </span>
+                      ) : (
+                        <p className="mt-5 inline-flex items-center gap-2 text-xs font-semibold text-accent">
+                          {item.linkLabel ?? 'View full image'}
+                          <ArrowUpRight
+                            className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                            aria-hidden="true"
+                          />
+                        </p>
+                      )}
                     </div>
                   </a>
                 ))}
