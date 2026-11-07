@@ -113,13 +113,29 @@ export const competencyRoles: CompetencyRole[] = [
     evidence: [
       {
         title: 'World Anatomy Day Organiser Certificate',
-        description:
-          'Gulf Medical University · 15 October 2026',
+        description: 'Gulf Medical University · 15 October 2026',
         href: '/world%20anatomy%20day.png',
         image: true,
       },
+      {
+        title: 'World Anatomy Day – Event Photograph 1',
+        description: 'Event evidence · Gulf Medical University',
+        href: '/worldanatomydayevi.JPG',
+        image: true,
+      },
+      {
+        title: 'World Anatomy Day – Event Photograph 2',
+        description: 'Event evidence · Gulf Medical University',
+        href: '/worldanatomydayevid.JPG',
+        image: true,
+      },
+      {
+        title: 'World Anatomy Day – Event Photograph 3',
+        description: 'Event evidence · Gulf Medical University',
+        href: '/worldanatomydayeviden.JPG',
+        image: true,
+      },
     ],
-    photosToAdd: true,
   },
   {
     number: '06',
