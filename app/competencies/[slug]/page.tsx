@@ -133,13 +133,6 @@ export default async function CompetencyDetailPage({
               </div>
             </div>
 
-            {role.status === 'completed' && (
-              <p className="mt-7 max-w-2xl text-sm leading-relaxed text-navy-muted">
-                Organising World Anatomy Day gave me the opportunity to take
-                responsibility for activities, work with other organisers,
-                and help make the event a success.
-              </p>
-            )}
           </Reveal>
         </div>
       </section>
