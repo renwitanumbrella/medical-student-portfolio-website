@@ -206,7 +206,7 @@ export default async function CompetencyDetailPage({
             </h2>
 
             {role.reflection ? (
-              <p className="mt-7 max-w-4xl text-sm leading-[2] text-muted-foreground md:text-base">
+              <p className="mt-7 max-w-4xl whitespace-pre-line text-sm leading-[2] text-muted-foreground md:text-base">
                 {role.reflection}
               </p>
             ) : (
