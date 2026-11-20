@@ -17,7 +17,6 @@ export function About() {
               <span className="flex size-24 items-center justify-center rounded-full border border-white/20 font-serif text-4xl">
                 {profile.initials}
               </span>
-              <p className="text-sm text-navy-muted">[Replace with your portrait photo]</p>
             </div>
           </div>
         </Reveal>
